@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-table',
@@ -9,8 +11,12 @@ export class TableComponent implements OnInit {
   e1:Array<any>;
   errorMessage:string;
   num:number=7;
+  items:Observable<any[]>;
 
-  constructor() { }
+
+  constructor(public db: AngularFireDatabase) { 
+    this.items= db.list('prediction').valueChanges();
+  }
 
   ngOnInit(): void {
   }

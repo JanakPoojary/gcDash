@@ -1,12 +1,22 @@
-<div style="background-color: mediumspringgreen;">
+<div style="background-color: mediumspringgreen;margin-bottom: 1rem;">
     <h3 class="text-center" style="padding:5px;margin:5px;color: #1b1e27;">Latest Prediction</h3>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <p>Paper</p>
+    <div class="row border rounded">
+        <div class="col-md-5 type">
+            <div class="row">
+                <div class="col" *ngFor='let item of items | async'>
+                    <h2 style="color:mediumspringgreen;">{{this.item.type}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" *ngFor='let item of items | async'>
+                    <p><b>Update Time-stamp :</b><br> {{date.toISOString()}}</p>
+                </div>
+            </div>
+            
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 type">
             <img src="https://cdn1.iconfinder.com/data/icons/office-flat-circle-vol-1/100/analytics__data__page__paper_-512.png"
             alt="paper" width="200px;">
         </div>
