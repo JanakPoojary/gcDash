@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class TableComponent implements OnInit {
   e1:Array<any>;
-  errorMessage:string;
   num:number=7;
   items:Observable<any[]>;
 

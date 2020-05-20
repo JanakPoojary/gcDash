@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor='let item of items | async; index as i'>
+            <tr *ngFor='let item of items | async | reverse; index as i'>
                 <td>{{i+1}}</td>
                 <td>{{this.item.type}}</td>
                 <td>{{this.item.date | date}}</td>

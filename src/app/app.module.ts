@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { TotalComponent } from './total/total.component';
 import { LiveComponent } from './live/live.component';
 import { BarchartComponent } from './barchart/barchart.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BarchartComponent } from './barchart/barchart.component';
     HomeComponent,
     TotalComponent,
     LiveComponent,
-    BarchartComponent
+    BarchartComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
