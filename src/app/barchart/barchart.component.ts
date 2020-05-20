@@ -26,17 +26,7 @@ export class BarchartComponent implements OnInit {
             data: this.Run,
             borderColor: '#3cba9f',
             backgroundColor: [
-              "#3cb371",
-              "#0000FF",
-              "#9966FF",
-              "#4C4CFF",
-              "#00FFFF",
-              "#f990a7",
-              "#aad2ed",
-              "#FF00FF",
-              "Blue",
-              "Red",
-              "Blue"
+              '#ff3c00', '#bf360c', '#ff8f00', '#ff5622','#f5e50a', '#ff5622', '#aae3f5'
             ],
             fill: true
           }
