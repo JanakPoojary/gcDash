@@ -6,6 +6,7 @@ import { TableComponent } from './table/table.component';
 import { LoginComponent } from './login/login.component';
 import { TotalComponent } from './total/total.component';
 import { LiveComponent } from './live/live.component';
+import { BarchartComponent } from './barchart/barchart.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'image', component: ImageComponent},
     {path: '', component: TableComponent, outlet:'table'},
     {path: '', component: TotalComponent, outlet:'pie-graph'},
-    {path: '', component: LiveComponent, outlet:'time'}
+    {path: '', component: LiveComponent, outlet:'time'},
+    {path: '', component: BarchartComponent, outlet:'chart'},
   ] },
   { path: 'login', component: LoginComponent },
   {path: '', redirectTo:'login', pathMatch:'full'},
