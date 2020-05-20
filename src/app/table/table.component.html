@@ -16,7 +16,7 @@
                 <td>{{i+1}}</td>
                 <td>{{this.item.type}}</td>
                 <td>{{this.item.date | date}}</td>
-                <td>{{this.item.date}}</td>
+                <td>{{this.item.date | date: 'hh:mm:ss a'}}</td>
             </tr>
             <tr>
                 <td><input class="btn" type="button" style="color: mediumspringgreen;" value="< prev" (click)="prev()">

@@ -12,6 +12,8 @@ import { TableComponent } from './table/table.component';
 import { ImageComponent } from './image/image.component';
 import { HomeComponent } from './home/home.component';
 import { TotalComponent } from './total/total.component';
+import { LiveComponent } from './live/live.component';
+import { BarchartComponent } from './barchart/barchart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TotalComponent } from './total/total.component';
     TableComponent,
     ImageComponent,
     HomeComponent,
-    TotalComponent
+    TotalComponent,
+    LiveComponent,
+    BarchartComponent
   ],
   imports: [
     BrowserModule,
