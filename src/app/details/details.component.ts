@@ -3,12 +3,12 @@ import { AngularFireDatabase } from '@angular/fire/database'
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css']
 })
-export class TableComponent implements OnInit {
-  
+export class DetailsComponent implements OnInit {
+
   items:Observable<any[]>;
 
   constructor(public db: AngularFireDatabase) { 
@@ -17,5 +17,6 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

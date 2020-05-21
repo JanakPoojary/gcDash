@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { TotalComponent } from './total/total.component';
 import { LiveComponent } from './live/live.component';
 import { BarchartComponent } from './barchart/barchart.component';
+import { DetailsComponent } from './details/details.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     {path: '', component: LiveComponent, outlet:'time'},
     {path: '', component: BarchartComponent, outlet:'chart'},
   ] },
+  {path: 'details', component: DetailsComponent},
   { path: 'login', component: LoginComponent },
   {path: '', redirectTo:'login', pathMatch:'full'},
   {path:'*',redirectTo:'error',pathMatch:'full'}
