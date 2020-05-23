@@ -5,12 +5,13 @@ import { HttpClient } from '@angular/common/http';
 import { Data } from '../../app/Data';
 import { Observable } from 'rxjs';
 
+
 @Component({
-  selector: 'app-barchart',
-  templateUrl: './barchart.component.html',
-  styleUrls: ['./barchart.component.css']
+  selector: 'app-polar',
+  templateUrl: './polar.component.html',
+  styleUrls: ['./polar.component.css']
 })
-export class BarchartComponent implements OnInit {
+export class PolarComponent implements OnInit {
   items: Observable<any[]>;
   cboard: number = 0;
   paper: number = 0;
@@ -61,59 +62,44 @@ export class BarchartComponent implements OnInit {
       });
   }
 
+  
 
   ngOnInit(): void {
-
   }
   makegraph(): void {
     this
-    this.barchart = new Chart('canvas', {
-      type: 'bar',
+    this.barchart = new Chart('canvas1', {
+      type: 'polarArea',
       data: {
         labels: this.Player,
-        
         datasets: [
           {
             data: [this.plastic, this.paper, this.metal, this.cboard,this.other],
             borderColor: 'white',
             backgroundColor: [
-              '#ff3c00', '#bf360c', '#ff8f00', '#ff5622', '#f5e50a', '#ff5622', '#aae3f5'
+              '#ff3c00', '#bf360c', '#ff8f00', '#f5e50a', '#ff5622', '#ff5622', '#aae3f5'
             ],
-            fill: true
+            fill: false
           }
         ]
       },
       options: {
         responsive:true,
         legend: {
-          display: false
+          display: true,
+          labels: {
+            // This more specific font property overrides the global property
+            fontColor: 'white'
+        }
         },
-        scales: {
-          xAxes: [{
-            display: true,
-            ticks: {
-              fontColor: "white", // this here
-            },
-            gridLines: {
-              display: true ,
-              color: "white"
-            },
-          }],
-          yAxes: [{
-            display: true,
-            ticks: {
-              fontColor: "white", // this here
-            },
-            scaleLabel: {
-              display: true,
-              labelString: 'Quantity (units)',
-              fontColor:"white"
-            },
-            gridLines: {
-              display: true ,
-              color: "#FFFFFF"
-            },
-          }],
+        scale: {
+          ticks:{
+            display:false
+          },
+          gridLines: {
+            display: true ,
+            color: "white"
+          },
         }
       }
     });

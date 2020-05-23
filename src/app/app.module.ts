@@ -16,6 +16,7 @@ import { LiveComponent } from './live/live.component';
 import { BarchartComponent } from './barchart/barchart.component';
 import { ReversePipe } from './reverse.pipe';
 import { DetailsComponent } from './details/details.component';
+import { PolarComponent } from './polar/polar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DetailsComponent } from './details/details.component';
     LiveComponent,
     BarchartComponent,
     ReversePipe,
-    DetailsComponent
+    DetailsComponent,
+    PolarComponent
   ],
   imports: [
     BrowserModule,
