@@ -31,8 +31,7 @@ export class BarchartComponent implements OnInit {
     var metal = 0;
     var plastic = 0;
     var other = 0;
-    query.once("value")
-      .then((snapshot) => {
+    query.on("value",(snapshot) => {
         snapshot.forEach((childSnapshot) => {
           if (childSnapshot.val().type == "cardboard" || childSnapshot.val().type == "Cardboard") {
             card = card + 1;
@@ -56,8 +55,9 @@ export class BarchartComponent implements OnInit {
         this.metal = metal;
         this.plastic = plastic;
         this.other = other;
-        // setTimeout (()=> { this.makegraph(); }, 1000);
         this.makegraph();
+        card=paper=metal=plastic=other=0;
+        
       });
   }
 
