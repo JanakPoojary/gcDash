@@ -13,10 +13,10 @@
         </thead>
         <tbody>
             <tr *ngFor='let item of items | async | reverse; index as i'>
-                <td *ngIf="i<6">{{(items | async)?.length - i}}</td>
-                <td *ngIf="i<6">{{this.item.type}}</td>
-                <td *ngIf="i<6">{{this.item.date | date}}</td>
-                <td *ngIf="i<6">{{this.item.date | date: 'hh:mm:ss a'}}</td>
+                <td *ngIf="i<5">{{(items | async)?.length - i}}</td>
+                <td *ngIf="i<5">{{this.item.type}}</td>
+                <td *ngIf="i<5">{{this.item.date | date}}</td>
+                <td *ngIf="i<5">{{this.item.date | date: 'hh:mm:ss a'}}</td>
             </tr>
             <tr>
                 <input class="btn" type="button" style="color: mediumspringgreen;" value="View more data"  [routerLink]="['/details']">
